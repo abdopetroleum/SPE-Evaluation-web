@@ -1,0 +1,31 @@
+.openedArrow::before{
+    font-family: FontAwesome;
+    content: "\f0d7";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+}
+.closedArrow::before{
+    font-family: FontAwesome;
+    content: "\f061";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+}
+.closed .content{
+    display: none !important;
+}
+.Active{
+    font-weight: bold;
+}
+.hidden{
+    display: none;
+}
+.linkbtn{
+    background-color: transparent;
+    border:none;
+}
+.linkbtn:focus{
+    border:none;
+    outline: none;
+}

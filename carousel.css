@@ -1,0 +1,52 @@
+.carousel {
+    /* any dimensions are fine, it can be responsive with max-width */
+    width: 600px;
+    min-width: 300px;
+    height: 500px;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .carousel-inner {
+    /* make sure your .items will get correct height */
+    height: 100%;
+  }
+  
+  .carousel-item {
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-item img {
+    visibility: hidden;
+  }
+  .carousel-control-prev{
+    position: absolute !important;
+    left: auto;
+    right: 30px;
+  }
+
+  .carousel-control-next, .carousel-control-prev  {
+    width: auto;
+bottom: 10px;
+top: auto;
+position: absolute;
+z-index: 2;
+margin-right: 5px;
+  }
+  .back{
+    z-index: 1;
+    position: absolute;
+    bottom: -10;
+    right: 30;
+    width: 30px;
+    height: 40px;
+    background-color: black;
+    overflow: hidden;
+
+  }
+
+  

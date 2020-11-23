@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../style/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body class="bg-light">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-storage.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCB_lnOTkOG1L0u3OC51SKWWs8hzXBT2yg",
+            authDomain: "spetest-6166a.firebaseapp.com",
+            databaseURL: "https://spetest-6166a.firebaseio.com",
+            projectId: "spetest-6166a",
+            storageBucket: "spetest-6166a.appspot.com",
+            messagingSenderId: "643492832699",
+            appId: "1:643492832699:web:de72303afa70d91892109e",
+            measurementId: "G-WW0H1YDVPV"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+    </script>
+    <div id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <img style="width: 90px;" src="../images/logo.png" />
+
+            <a class="navbar-brand" href="#">    &nbsp;&nbsp;&nbsp;SPE Evaluation System<small style="font-size:small"></small> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto ">
+
+
+                    <li class="nav-item pr-2 ">
+                        <a class="nav-link" href="./login.html">Login</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Register</a>
+                    </li>
+            </div>
+        </nav>
+    </div>
+    <div class="container-md align-items-center py-5 ">
+
+        <div class="row border p-3 shadow-lg bg-white">
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Your email address : xxxxxx@xxxxx.xxx" />
+                    <small style="color: red;" id="email_err"></small>
+                    <small style="color:grey">required</small>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="*********" />
+                    <small style="color: red;" id="password_err"></small>
+
+                    <small style="color:grey">required</small>
+
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" />
+                    <small style="color: red;" id="name_err"></small>
+
+                    <small style="color:grey">required</small>
+
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+
+                    <label for="phone">Phone</label>
+                    <input type="number" name="phone" id="phone" class="form-control" />
+                    <small style="color: red;" id="phone_err"></small>
+
+                    <small style="color:grey">required</small>
+
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="link">Your facebook account url</label>
+                    <input type="text" class="form-control" id="facelink">
+                    <small id="facelink_err" style="color: red;"></small>
+                    <small>required</small>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+
+                    <label for="gender">Choose your gender</label>
+                    <select name="gender" id="gender" class="form-control">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+
+                    <small style="color:grey">required</small>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+
+                    <label for="commuties">Choose a commuty</label>
+                    <select name="commuties" id="commuty" class="form-control">
+                        <option value="ACADEMY">Academy</option>
+                        <option value="ANDROID_APP">Android</option>
+                        <option value="BD">BD</option>
+                        <option value="E4ME">E4ME</option>
+                        <option value="EXTRACURRICULAR">Extracurricular</option>
+                        <option value="HRD">HRD</option>
+                        <option value="HRM">HRM</option>
+                        <option value="IR">IR</option>
+                        <option value="IT_WEB">IT_Web</option>
+                        <option value="LOGISTICS">Logistics</option>
+                        <option value="MULTIMEDIA">Multimedia</option>
+                        <option value="Magazine_Designs">Magazine Designs</option>
+                        <option value="Magazine_Editing">Magazine Editing</option>
+                        <option value="OFFLINE_MARKETING">Offline Marketing</option>
+                        <option value="ORGANIZING">Organizing</option>
+                        <option value="SOCIAL_MEDIA">Social Media</option>
+                    </select>
+                    <small style="color:grey">required</small>
+
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <input type="file" class="" id="image" />
+                </div>
+            </div>
+            <button class="btn btn-primary" id="submit">Submit</button>
+        </div>
+</body>
+<script src="../index.js"></script>
+
+</html>

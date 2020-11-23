@@ -1,0 +1,57 @@
+{
+    "user":{
+        "id":1,
+        "username":"sharaf",
+        "firstname":"sharaf-eldeen",
+        "lastname":"ashraf",
+        "phone":"01061445744",
+        "photoUrl":"https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg",
+        "likes":[
+            
+        ],
+        "followers":[
+
+        ],
+        "followings":[
+
+        ],
+        "posts":[
+            {
+            "id":15
+            }
+        ],
+        "comments":[
+
+        ],
+        "notifications":[
+
+        ],
+        "Ratings":[
+            4
+        ]
+    },
+    "post":{
+        "id":15,
+        "title":"zobry",
+        "content":"fafsdafsafasfdsafas",
+        "type":"article",
+        "category":"science",
+        "owner":1,
+        "likers":[
+
+        ],
+        "rating":2.6,
+        "ratings":[4],
+        "comments":[],
+        "images":[],
+        "notifications":[]
+    },
+    "rating":
+        {
+        "id":4,
+        "rating":2.6,
+        "user":1,
+        "post":15
+        }
+    
+}
